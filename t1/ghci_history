@@ -1,0 +1,71 @@
+:load t1
+:load t1
+:load t1
+:load t1
+:load t1
+:load t1
+noVog2 "ablablableble"
+:load t1
+:load t1
+:load t1
+:load t1
+:load t1
+noVog "blableblablu"
+:load t1
+:load t1
+htmlListItems2 ["la", "le", "li"]
+:load t1
+htmlListItems ["bla", "ble", "blu"]
+:load t1
+addComma ["aaa", "blabla"]
+addComa ["aaa", "blabla"]
+:load t1
+:load t1
+:load t1
+map addComma ["alou", "iha"]
+addComma "oi"
+:load t1
+addComa 'abc'
+addComa 'a'
+map addComa [a, b, c]
+:load t1
+:load t1
+isVowel 'c'
+isVowel 'e'
+:load t1
+clear
+:load t1
+:load t1
+:load t1
+concStr "joao"
+concStr joao
+concStr [Joao, Maria, Luis]
+:load prog.hs
+concStr [Joao, Maria, Luis]
+:load prog.hs
+sumSquares 2 3
+hasEqHeads [1, 2, 3] [3, 2, 1]
+:load prog.hs
+sumSquares 2 3
+hasEqHeads [1, 2, 3] [3, 2, 1]
+:load prog.hs
+:load prog.hs
+hasEqHeads [1, 2, 3] [3, 2, 1]
+sumSquares 2 3
+:load prog.hs
+sumSquares 2 3
+:load prog.hs
+:f sumSquares
+let sumSquares :: Int -> Int -> Int
+sumSquares :: Int -> Int -> Int
+isLongWord "test"
+squareFirst [-3,4,5]
+encodeMe 'S'
+isEven 9
+isEven 8
+square (2+1)
+square 2 + 1
+:load prog.hs
+:load prog.hs
+:l prog.hs
+:l prog.hs
