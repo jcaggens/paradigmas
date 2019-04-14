@@ -1,0 +1,247 @@
+GHCi, version 8.6.3: http://www.haskell.org/ghc/  :? for help
+Prelude> :cd C:\Users\Josiane\Documents\GitHub\paradigmas\t2
+Prelude> :load "t2.hs"
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+Ok, one module loaded.
+*Main> :load "t2.hs"
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+Ok, one module loaded.
+*Main> :load "t2.hs"
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+Ok, one module loaded.
+*Main> printRect (genRectsInLine 10)
+   <rect x='0.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='60.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='120.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='180.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='240.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='300.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='360.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='420.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='480.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+   <rect x='540.000' y='0.000' width='50.00' height='50.00' style='fill:rgb(0,0,0); mix-blend-mode: screen;' />
+
+*Main> :cd C:\Users\Josiane\Documents\GitHub\paradigmas\t2
+Warning: changing directory causes all loaded modules to be unloaded,
+because the search path has changed.
+Prelude> :load "t2.hs"
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+
+t2.hs:41:1: error:
+    The type signature for ‘genCase2’ lacks an accompanying binding
+   |
+41 | genCase2 :: IO () : gera círculos dispostos sobre um círculo    | ^^^^^^^^
+
+t2.hs:41:19: error:
+    Illegal operator ‘:’ in type ‘IO ()
+                                  : gera círculos dispostos sobre um círculo’
+      Use TypeOperators to allow operators in types
+   |
+41 | genCase2 :: IO () : gera círculos dispostos sobre um círculo    |                   ^
+
+t2.hs:47:1: error:
+    The type signature for ‘genCase3’ lacks an accompanying binding
+   |
+47 | genCase3 :: IO () : gera matriz com círculos sobrepostos    | ^^^^^^^^
+
+t2.hs:47:19: error:
+    Illegal operator ‘:’ in type ‘IO ()
+                                  : gera matriz com círculos sobrepostos’
+      Use TypeOperators to allow operators in types
+   |
+47 | genCase3 :: IO () : gera matriz com círculos sobrepostos    |                   ^
+
+t2.hs:53:1: error:
+    The type signature for ‘genCase4’ lacks an accompanying binding
+
+   |
+53 | genCase4 :: IO () : gera círculos dispostos sobre senoides    | ^^^^^^^^
+
+t2.hs:53:19: error:
+    Illegal operator ‘:’ in type ‘IO ()
+                                  : gera círculos dispostos sobre senoides’
+      Use TypeOperators to allow operators in types
+   |
+53 | genCase4 :: IO () : gera círculos dispostos sobre senoides    |                   ^
+Failed, no modules loaded.
+Prelude> :cd C:\Users\Josiane\Documents\GitHub\paradigmas\t2
+Warning: changing directory causes all loaded modules to be unloaded,
+because the search path has changed.
+Prelude> :load "t2.hs"
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+
+t2.hs:23:17: error:
+    • Couldn't match type ‘[Rect]’ with ‘(Point, Float, Float)’
+      Expected type: [Rect]
+        Actual type: [[Rect]]
+    • In the expression: map genRectsInLine list
+      In an equation for ‘gerImage’:
+          gerImage list = map genRectsInLine list
+   |
+23 | gerImage list = map genRectsInLine list    |                 ^^^^^^^^^^^^^^^^^^^^^^^
+
+t2.hs:26:33: error:
+    • Couldn't match expected type ‘Float’ with actual type ‘Int’
+    • In the expression: y
+      In the expression: (m * (w + gap), y)
+      In the expression: ((m * (w + gap), y), w, h)
+   |
+26 | genRectsInLine y = [((m*(w+gap),y),w,h) | m <- [0..fromIntegral (10-1)]]    |                                 ^
+
+t2.hs:31:67: error:
+    • Couldn't match expected type ‘(Int, Int, Int)’
+                  with actual type ‘Int -> [(Int, Int, Int)]’
+    • Probable cause: ‘greenPalette’ is applied to too few arguments
+      In the first argument of ‘svgStyle’, namely ‘(greenPalette)’
+      In the second argument of ‘svgRect’, namely
+        ‘(svgStyle (greenPalette))’
+      In the second argument of ‘(++)’, namely
+        ‘svgRect r (svgStyle (greenPalette))’
+   |
+31 | printRect list = putStr (unlines $ ["   " ++ svgRect r (svgStyle (greenPalette)) | r <- list])    |                                                                   ^^^^^^^^^^^^
+Failed, no modules loaded.
+Prelude> :reload
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+
+t2.hs:26:33: error:
+    • Couldn't match expected type ‘Float’ with actual type ‘Int’
+    • In the expression: y
+      In the expression: (m * (w + gap), y)
+      In the expression: ((m * (w + gap), y), w, h)
+   |
+26 | genRectsInLine y = [((m*(w+gap),y),w,h) | m <- [0..fromIntegral (10-1)]]    |                                 ^
+
+t2.hs:35:23: error:
+    • Couldn't match type ‘[Rect]’ with ‘(Point, Float, Float)’
+      Expected type: [Rect]
+        Actual type: [[Rect]]
+    • In the first argument of ‘printRect’, namely
+        ‘(gerImage [0, 70, 140, 210, ....])’
+      In the expression: printRect (gerImage [0, 70, 140, 210, ....])
+      In an equation for ‘genCase1’:
+          genCase1 = printRect (gerImage [0, 70, 140, ....])
+   |
+35 | genCase1 = printRect (gerImage [0, 70, 140, 210, 280])    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Failed, no modules loaded.
+Prelude> :reload
+
+t2.hs:31:88: error: parse error on input ‘,’
+   |
+31 | genRectsInLine n lines = [((m*(w+gap),lines*(h+gap)),w,h) | m <- [0..fromIntegral (n-1), lines <- [0..fromIntegral(lines-1)]]]    |                                                                                        ^
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+Failed, no modules loaded.
+Prelude>  :reload
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+
+t2.hs:28:36: error:
+    • Couldn't match type ‘Float’ with ‘Int’
+      Expected type: [Int]
+        Actual type: [Float]
+    • In the second argument of ‘map’, namely ‘list’
+      In the expression: map genRectsInLine list
+      In an equation for ‘gerImage’:
+          gerImage list = map genRectsInLine list
+   |
+28 | gerImage list = map genRectsInLine list    |                                    ^^^^
+
+t2.hs:31:1: error:
+    • Couldn't match expected type ‘[Rect]’
+                  with actual type ‘Integer
+                                    -> [((Integer, Integer), Integer, Integer)]’
+    • The equation(s) for ‘genRectsInLine’ have two arguments,
+      but its type ‘Int -> [Rect]’ has only one
+   |
+31 | genRectsInLine n lines = [((m*(w+gap),lines*(h+gap)),w,h) | m <- [0..fromIntegral (n-1)], lines <- [0..fromIntegral(lines-1)]]    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+
+t2.hs:40:23: error:
+    • Couldn't match expected type ‘Integer -> [Rect]’
+                  with actual type ‘[Rect]’
+    • The function ‘genRectsInLine’ is applied to two arguments,
+      but its type ‘Int -> [Rect]’ has only one
+      In the first argument of ‘printRect’, namely
+        ‘(genRectsInLine 20 2)’
+      In the expression: printRect (genRectsInLine 20 2)
+   |
+40 | genCase1 = printRect (genRectsInLine 20 2)    |                       ^^^^^^^^^^^^^^^^^^^
+Failed, no modules loaded.
+ :reload
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+
+t2.hs:28:17: error:
+    • Couldn't match type ‘Int -> [Rect]’ with ‘[Rect]’
+      Expected type: [[Rect]]
+        Actual type: [Int -> [Rect]]
+    • In the expression: map genRectsInLine list
+      In an equation for ‘gerImage’:
+          gerImage list = map genRectsInLine list
+   |
+28 | gerImage list = map genRectsInLine list    |                 ^^^^^^^^^^^^^^^^^^^^^^^
+
+t2.hs:28:36: error:
+    • Couldn't match type ‘Float’ with ‘Int’
+      Expected type: [Int]
+        Actual type: [Float]
+    • In the second argument of ‘map’, namely ‘list’
+      In the expression: map genRectsInLine list
+      In an equation for ‘gerImage’:
+          gerImage list = map genRectsInLine list
+   |
+28 | gerImage list = map genRectsInLine list    |                                    ^^^^
+
+t2.hs:111:39: error:
+    • Couldn't match expected type ‘[Rect]’
+                  with actual type ‘Int -> [Rect]’
+    • Probable cause: ‘rects’ is applied to too few arguments
+      In the second argument of ‘svgElements’, namely ‘rects’
+      In the expression: svgElements svgRect rects (map svgStyle palette)
+      In an equation for ‘svgfigs’:
+          svgfigs = svgElements svgRect rects (map svgStyle palette)
+    |
+111 |         svgfigs = svgElements svgRect rects (map svgStyle palette)     |                                       ^^^^^
+Failed, no modules loaded.
+Prelude> :reload
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+Failed, no modules loaded.
+Prelude> 
+t2.hs:108:39: error:
+    • Couldn't match expected type ‘[Rect]’
+                  with actual type ‘Int -> [Rect]’
+    • Probable cause: ‘rects’ is applied to too few arguments
+      In the second argument of ‘svgElements’, namely ‘rects’
+      In the expression: svgElements svgRect rects (map svgStyle palette)
+      In an equation for ‘svgfigs’:
+          svgfigs = svgElements svgRect rects (map svgStyle palette)
+    |
+108 |         svgfigs = svgElements svgRect rects (map svgStyle palette)     |                                       ^^^^^
+Prelude> 
+t2.hs:109:17: error:
+    • Couldn't match expected type ‘Int -> t’ with actual type ‘IO ()’
+    • The function ‘genCase1’ is applied to one argument,
+      but its type ‘IO ()’ has none
+      In the expression: genCase1 nrects
+      In an equation for ‘rects’: rects = genCase1 nrects
+    • Relevant bindings include rects :: t (bound at t2.hs:109:9)
+    |
+109 |         rects = genCase1 nrects     |                 ^^^^^^^^^^^^^^^
+:reload
+[1 of 1] Compiling Main             ( t2.hs, interpreted )
+
+t2.hs:108:39: error:
+    • Couldn't match expected type ‘[Rect]’ with actual type ‘IO ()’
+    • In the second argument of ‘svgElements’, namely ‘rects’
+      In the expression: svgElements svgRect rects (map svgStyle palette)
+      In an equation for ‘svgfigs’:
+          svgfigs = svgElements svgRect rects (map svgStyle palette)
+    |
+108 |         svgfigs = svgElements svgRect rects (map svgStyle palette)     |                                       ^^^^^
+Failed, no modules loaded.
+Prelude> 
