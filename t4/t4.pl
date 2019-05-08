@@ -59,10 +59,10 @@ lugar(maria, ap, sexta).
 lugar(anita, ap, quinta).
 lugar(anita, ap, sexta).
 
-arma(bastao, poa, quinta).
-arma(bastao, sm, quarta).
-arma(martelo, ap, quarta).
-arma(martelo, ap, quinta).
+objeto(bastao, poa, quinta).
+objeto(bastao, sm, quarta).
+objeto(martelo, ap, quarta).
+objeto(martelo, ap, quinta).
 
 key(sm, segunda).
 key(poa, terca).
@@ -70,7 +70,7 @@ key(poa, terca).
 ciume(X) :- relacionamento(anita, Y), relacionamento(X, Y).
 
 paradeiro(X) :- lugar(X, ap, Z), lugar(anita, ap, Z).
-arma(X) :- lugar(X, Y, Z), arma(_, Y, Z).
+arma(X) :- lugar(X, Y, Z), objeto(_, Y, Z).
 chave(X) :- lugar(X, Y, Z), key(Y, Z).
 
 acesso(X) :- arma(X), chave(X), paradeiro(X).
