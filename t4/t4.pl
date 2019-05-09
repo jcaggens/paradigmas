@@ -77,4 +77,4 @@ acesso(X) :- arma(X), chave(X), paradeiro(X).
 
 motivo(X) :- insano(X); pobre(X); ciume(X).
 
-assassino(X) :- motivo(X), acesso(X).
+assassino(X) :- motivo(X), acesso(X), !.
